@@ -21,6 +21,7 @@ jobs:
     - name: Build e Push no Azure Container Registry
       run: |
         pwd
-        docker build . --file /home/runner/work/ASPNETCore3.1-API-REST_Docker-Alpine/ASPNETCore3.1-API-REST_Docker-Alpine/Dockerfile --tag ${{ secrets.DOCKER_CONTAINER_REGISTRY }}/apicontagem:latest
-        docker tag ${{ secrets.DOCKER_CONTAINER_REGISTRY }}/apicontagem:latest ${{ secrets.DOCKER_CONTAINER_REGISTRY }}/apicontagem:$(date +%s)
-        docker push ${{ secrets.DOCKER_CONTAINER_REGISTRY }}/apicontagem
+        cat Dockerfile
+        #docker build . --file /home/runner/work/ASPNETCore3.1-API-REST_Docker-Alpine/ASPNETCore3.1-API-REST_Docker-Alpine/Dockerfile --tag ${{ secrets.DOCKER_CONTAINER_REGISTRY }}/apicontagem:latest
+        #docker tag ${{ secrets.DOCKER_CONTAINER_REGISTRY }}/apicontagem:latest ${{ secrets.DOCKER_CONTAINER_REGISTRY }}/apicontagem:$(date +%s)
+        #docker push ${{ secrets.DOCKER_CONTAINER_REGISTRY }}/apicontagem
